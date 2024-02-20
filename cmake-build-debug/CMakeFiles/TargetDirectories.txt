@@ -1,0 +1,3 @@
+/home/dog/CLionProjects/practice1-EDD/cmake-build-debug/CMakeFiles/practice1_EDD.dir
+/home/dog/CLionProjects/practice1-EDD/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/dog/CLionProjects/practice1-EDD/cmake-build-debug/CMakeFiles/rebuild_cache.dir
