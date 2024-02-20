@@ -1,6 +1,11 @@
 #include <iostream>
+#include "backend/cards/Deck.h"
+using namespace std;
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    Deck *d = new Deck();
+
+    d->print();
+
     return 0;
 }

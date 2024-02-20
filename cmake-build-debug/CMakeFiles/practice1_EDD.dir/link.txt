@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/practice1_EDD.dir/main.cpp.o CMakeFiles/practice1_EDD.dir/backend/cards/Card.cpp.o CMakeFiles/practice1_EDD.dir/backend/cards/Deck.cpp.o CMakeFiles/practice1_EDD.dir/backend/cards/Queue.cpp.o CMakeFiles/practice1_EDD.dir/backend/cards/Node.cpp.o -o practice1_EDD 
