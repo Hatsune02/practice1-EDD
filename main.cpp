@@ -1,5 +1,6 @@
 #include <iostream>
 #include "backend/cards/Deck.h"
+#include "backend/cards/Queue.h"
 using namespace std;
 
 int main() {

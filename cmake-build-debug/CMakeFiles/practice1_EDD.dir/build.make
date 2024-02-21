@@ -139,13 +139,43 @@ CMakeFiles/practice1_EDD.dir/backend/cards/Node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/practice1_EDD.dir/backend/cards/Node.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dog/CLionProjects/practice1-EDD/backend/cards/Node.cpp -o CMakeFiles/practice1_EDD.dir/backend/cards/Node.cpp.s
 
+CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.o: CMakeFiles/practice1_EDD.dir/flags.make
+CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.o: /home/dog/CLionProjects/practice1-EDD/backend/cards/LinkedList.cpp
+CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.o: CMakeFiles/practice1_EDD.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dog/CLionProjects/practice1-EDD/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.o -MF CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.o.d -o CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.o -c /home/dog/CLionProjects/practice1-EDD/backend/cards/LinkedList.cpp
+
+CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dog/CLionProjects/practice1-EDD/backend/cards/LinkedList.cpp > CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.i
+
+CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dog/CLionProjects/practice1-EDD/backend/cards/LinkedList.cpp -o CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.s
+
+CMakeFiles/practice1_EDD.dir/backend/board/Board.cpp.o: CMakeFiles/practice1_EDD.dir/flags.make
+CMakeFiles/practice1_EDD.dir/backend/board/Board.cpp.o: /home/dog/CLionProjects/practice1-EDD/backend/board/Board.cpp
+CMakeFiles/practice1_EDD.dir/backend/board/Board.cpp.o: CMakeFiles/practice1_EDD.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dog/CLionProjects/practice1-EDD/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/practice1_EDD.dir/backend/board/Board.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/practice1_EDD.dir/backend/board/Board.cpp.o -MF CMakeFiles/practice1_EDD.dir/backend/board/Board.cpp.o.d -o CMakeFiles/practice1_EDD.dir/backend/board/Board.cpp.o -c /home/dog/CLionProjects/practice1-EDD/backend/board/Board.cpp
+
+CMakeFiles/practice1_EDD.dir/backend/board/Board.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/practice1_EDD.dir/backend/board/Board.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dog/CLionProjects/practice1-EDD/backend/board/Board.cpp > CMakeFiles/practice1_EDD.dir/backend/board/Board.cpp.i
+
+CMakeFiles/practice1_EDD.dir/backend/board/Board.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/practice1_EDD.dir/backend/board/Board.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dog/CLionProjects/practice1-EDD/backend/board/Board.cpp -o CMakeFiles/practice1_EDD.dir/backend/board/Board.cpp.s
+
 # Object files for target practice1_EDD
 practice1_EDD_OBJECTS = \
 "CMakeFiles/practice1_EDD.dir/main.cpp.o" \
 "CMakeFiles/practice1_EDD.dir/backend/cards/Card.cpp.o" \
 "CMakeFiles/practice1_EDD.dir/backend/cards/Deck.cpp.o" \
 "CMakeFiles/practice1_EDD.dir/backend/cards/Queue.cpp.o" \
-"CMakeFiles/practice1_EDD.dir/backend/cards/Node.cpp.o"
+"CMakeFiles/practice1_EDD.dir/backend/cards/Node.cpp.o" \
+"CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.o" \
+"CMakeFiles/practice1_EDD.dir/backend/board/Board.cpp.o"
 
 # External object files for target practice1_EDD
 practice1_EDD_EXTERNAL_OBJECTS =
@@ -155,9 +185,11 @@ practice1_EDD: CMakeFiles/practice1_EDD.dir/backend/cards/Card.cpp.o
 practice1_EDD: CMakeFiles/practice1_EDD.dir/backend/cards/Deck.cpp.o
 practice1_EDD: CMakeFiles/practice1_EDD.dir/backend/cards/Queue.cpp.o
 practice1_EDD: CMakeFiles/practice1_EDD.dir/backend/cards/Node.cpp.o
+practice1_EDD: CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.o
+practice1_EDD: CMakeFiles/practice1_EDD.dir/backend/board/Board.cpp.o
 practice1_EDD: CMakeFiles/practice1_EDD.dir/build.make
 practice1_EDD: CMakeFiles/practice1_EDD.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dog/CLionProjects/practice1-EDD/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable practice1_EDD"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dog/CLionProjects/practice1-EDD/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable practice1_EDD"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/practice1_EDD.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

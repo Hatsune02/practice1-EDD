@@ -11,7 +11,7 @@
 using namespace std;
 
 string symbols[] = {"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
-string suits[] = {"!!", "<3","<>","E3"};
+string suits[] = {"♠", "♥","♦","♣"};
 char color1 = 'N', color2 = 'R';
 
 Deck::Deck() {

@@ -11,4 +11,8 @@ add_executable(practice1_EDD main.cpp
         backend/cards/Queue.cpp
         backend/cards/Queue.h
         backend/cards/Node.cpp
-        backend/cards/Node.h)
+        backend/cards/Node.h
+        backend/cards/LinkedList.cpp
+        backend/cards/LinkedList.h
+        backend/board/Board.cpp
+        backend/board/Board.h)

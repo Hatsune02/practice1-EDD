@@ -129,6 +129,30 @@ practice1_EDD/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/practice1_EDD.dir/build.make CMakeFiles/practice1_EDD.dir/build
 .PHONY : practice1_EDD/fast
 
+backend/board/Board.o: backend/board/Board.cpp.o
+.PHONY : backend/board/Board.o
+
+# target to build an object file
+backend/board/Board.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practice1_EDD.dir/build.make CMakeFiles/practice1_EDD.dir/backend/board/Board.cpp.o
+.PHONY : backend/board/Board.cpp.o
+
+backend/board/Board.i: backend/board/Board.cpp.i
+.PHONY : backend/board/Board.i
+
+# target to preprocess a source file
+backend/board/Board.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practice1_EDD.dir/build.make CMakeFiles/practice1_EDD.dir/backend/board/Board.cpp.i
+.PHONY : backend/board/Board.cpp.i
+
+backend/board/Board.s: backend/board/Board.cpp.s
+.PHONY : backend/board/Board.s
+
+# target to generate assembly for a file
+backend/board/Board.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practice1_EDD.dir/build.make CMakeFiles/practice1_EDD.dir/backend/board/Board.cpp.s
+.PHONY : backend/board/Board.cpp.s
+
 backend/cards/Card.o: backend/cards/Card.cpp.o
 .PHONY : backend/cards/Card.o
 
@@ -176,6 +200,30 @@ backend/cards/Deck.s: backend/cards/Deck.cpp.s
 backend/cards/Deck.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/practice1_EDD.dir/build.make CMakeFiles/practice1_EDD.dir/backend/cards/Deck.cpp.s
 .PHONY : backend/cards/Deck.cpp.s
+
+backend/cards/LinkedList.o: backend/cards/LinkedList.cpp.o
+.PHONY : backend/cards/LinkedList.o
+
+# target to build an object file
+backend/cards/LinkedList.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practice1_EDD.dir/build.make CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.o
+.PHONY : backend/cards/LinkedList.cpp.o
+
+backend/cards/LinkedList.i: backend/cards/LinkedList.cpp.i
+.PHONY : backend/cards/LinkedList.i
+
+# target to preprocess a source file
+backend/cards/LinkedList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practice1_EDD.dir/build.make CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.i
+.PHONY : backend/cards/LinkedList.cpp.i
+
+backend/cards/LinkedList.s: backend/cards/LinkedList.cpp.s
+.PHONY : backend/cards/LinkedList.s
+
+# target to generate assembly for a file
+backend/cards/LinkedList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practice1_EDD.dir/build.make CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.s
+.PHONY : backend/cards/LinkedList.cpp.s
 
 backend/cards/Node.o: backend/cards/Node.cpp.o
 .PHONY : backend/cards/Node.o
@@ -258,12 +306,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... practice1_EDD"
+	@echo "... backend/board/Board.o"
+	@echo "... backend/board/Board.i"
+	@echo "... backend/board/Board.s"
 	@echo "... backend/cards/Card.o"
 	@echo "... backend/cards/Card.i"
 	@echo "... backend/cards/Card.s"
 	@echo "... backend/cards/Deck.o"
 	@echo "... backend/cards/Deck.i"
 	@echo "... backend/cards/Deck.s"
+	@echo "... backend/cards/LinkedList.o"
+	@echo "... backend/cards/LinkedList.i"
+	@echo "... backend/cards/LinkedList.s"
 	@echo "... backend/cards/Node.o"
 	@echo "... backend/cards/Node.i"
 	@echo "... backend/cards/Node.s"

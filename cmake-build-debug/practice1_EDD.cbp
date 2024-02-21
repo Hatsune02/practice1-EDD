@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/dog/CLionProjects/practice1-EDD/backend/board/Board.cpp">
+			<Option target="practice1_EDD"/>
+		</Unit>
+		<Unit filename="/home/dog/CLionProjects/practice1-EDD/backend/board/Board.h">
+			<Option target="practice1_EDD"/>
+		</Unit>
 		<Unit filename="/home/dog/CLionProjects/practice1-EDD/backend/cards/Card.cpp">
 			<Option target="practice1_EDD"/>
 		</Unit>
@@ -92,6 +98,12 @@
 			<Option target="practice1_EDD"/>
 		</Unit>
 		<Unit filename="/home/dog/CLionProjects/practice1-EDD/backend/cards/Deck.h">
+			<Option target="practice1_EDD"/>
+		</Unit>
+		<Unit filename="/home/dog/CLionProjects/practice1-EDD/backend/cards/LinkedList.cpp">
+			<Option target="practice1_EDD"/>
+		</Unit>
+		<Unit filename="/home/dog/CLionProjects/practice1-EDD/backend/cards/LinkedList.h">
 			<Option target="practice1_EDD"/>
 		</Unit>
 		<Unit filename="/home/dog/CLionProjects/practice1-EDD/backend/cards/Node.cpp">

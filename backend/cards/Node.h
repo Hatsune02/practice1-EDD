@@ -4,10 +4,14 @@
 
 #ifndef PRACTICE1_EDD_NODE_H
 #define PRACTICE1_EDD_NODE_H
-
+#include "Card.h"
 
 class Node {
 
+public:
+    Card card = Card(nullptr, nullptr, 0, 0);
+    Node *next;
+    Node *prev;
 };
 
 
