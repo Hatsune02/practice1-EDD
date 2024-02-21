@@ -1,5 +1,5 @@
-CMakeFiles/practice1_EDD.dir/main.cpp.o: \
- /home/dog/CLionProjects/practice1-EDD/main.cpp \
+CMakeFiles/practice1_EDD.dir/backend/board/Board.cpp.o: \
+ /home/dog/CLionProjects/practice1-EDD/backend/board/Board.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -155,4 +155,8 @@ CMakeFiles/practice1_EDD.dir/main.cpp.o: \
  /home/dog/CLionProjects/practice1-EDD/backend/board/../cards/Queue.h \
  /home/dog/CLionProjects/practice1-EDD/backend/board/../cards/Node.h \
  /home/dog/CLionProjects/practice1-EDD/backend/board/../cards/Card.h \
- /home/dog/CLionProjects/practice1-EDD/backend/board/../cards/LinkedList.h
+ /home/dog/CLionProjects/practice1-EDD/backend/board/../cards/LinkedList.h \
+ /home/dog/CLionProjects/practice1-EDD/backend/board/../cards/Deck.h \
+ /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_vector.h \
+ /usr/include/c++/11/bits/stl_bvector.h \
+ /usr/include/c++/11/bits/vector.tcc

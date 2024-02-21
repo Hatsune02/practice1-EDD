@@ -74,11 +74,11 @@ void LinkedList::removeBack() {
     delete aux;
 }
 
-void LinkedList::display() {
+void LinkedList::print() {
     Node *current = head;
     while (current) {
-        cout << current->card.getSymbol();
-        cout << current->card.getSuit() << " ";
+        cout << *current->card.getSymbol();
+        cout << *current->card.getSuit() << " ";
         current = current->next;
     }
    cout << endl;

@@ -1,12 +1,13 @@
 #include <iostream>
-#include "backend/cards/Deck.h"
-#include "backend/cards/Queue.h"
+
+#include "backend/board/Board.h"
+
 using namespace std;
 
 int main() {
-    Deck *d = new Deck();
+    Board *b = new Board();
 
-    d->print();
+    b->fillBoard();
 
     return 0;
 }

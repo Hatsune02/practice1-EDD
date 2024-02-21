@@ -42,3 +42,12 @@ Card Queue::takeOut() {
 bool Queue::isEmpty() const {
     return front == nullptr;
 }
+
+void Queue::print() {
+    Node *current = front;
+    while (current != nullptr) {
+        cout << *current->card.getSymbol() << *current->card.getSuit() << endl;
+        current = current->next;
+    }
+    std::cout << std::endl;
+}

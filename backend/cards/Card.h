@@ -16,6 +16,7 @@ private:
     bool hidden;
 public:
     //CONSTRUCTOR
+    Card();
     Card(string*, string*, char, int);
     //getters
     string* getSymbol();

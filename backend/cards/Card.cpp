@@ -6,6 +6,7 @@
 #include <string>
 using namespace std;
 
+Card::Card() {}
 Card::Card(string* symbol, string* suit, char color, int value) {
     this->symbol = symbol;
     this->suit = suit;

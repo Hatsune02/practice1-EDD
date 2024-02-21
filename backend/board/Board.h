@@ -12,15 +12,15 @@
 
 class Board {
 private:
-    Queue queue1;
-    Queue queue2;
-    LinkedList col1;
-    LinkedList col2;
-    LinkedList col3;
-    LinkedList col4;
-    LinkedList col5;
-    LinkedList col6;
-    LinkedList col7;
+    Queue *queue1;
+    Queue *queue2;
+    LinkedList *col1;
+    LinkedList *col2;
+    LinkedList *col3;
+    LinkedList *col4;
+    LinkedList *col5;
+    LinkedList *col6;
+    LinkedList *col7;
     stack<Card> stack1;
     stack<Card> stack2;
     stack<Card> stack3;
@@ -28,7 +28,7 @@ private:
 
 public:
     Board();
-
+    void fillBoard();
 };
 
 

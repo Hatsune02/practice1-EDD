@@ -15,6 +15,7 @@ public:
     void getInto(Card);
     Card takeOut();
     bool isEmpty() const;
+    void print();
 };
 
 

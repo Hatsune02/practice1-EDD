@@ -19,7 +19,7 @@ public:
     void addToBack(Card);
     void removeFront();
     void removeBack();
-    void display();
+    void print();
 
 };
 
