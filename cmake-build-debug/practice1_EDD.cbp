@@ -118,6 +118,12 @@
 		<Unit filename="/home/dog/CLionProjects/practice1-EDD/backend/cards/Queue.h">
 			<Option target="practice1_EDD"/>
 		</Unit>
+		<Unit filename="/home/dog/CLionProjects/practice1-EDD/backend/cards/Stack.cpp">
+			<Option target="practice1_EDD"/>
+		</Unit>
+		<Unit filename="/home/dog/CLionProjects/practice1-EDD/backend/cards/Stack.h">
+			<Option target="practice1_EDD"/>
+		</Unit>
 		<Unit filename="/home/dog/CLionProjects/practice1-EDD/main.cpp">
 			<Option target="practice1_EDD"/>
 		</Unit>

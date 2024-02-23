@@ -13,6 +13,9 @@ Board::Board() {
     for (int i = 0; i < 7; ++i) {
         this->col[i] = new LinkedList();
     }
+    for (int i = 0; i < 4; ++i) {
+        this->stacks[i] = new Stack();
+    }
 }
 
 void Board::fillBoard() {
@@ -71,6 +74,10 @@ void Board::fillBoard() {
 void Board::printBoard() {
     queue1->print(true);
     queue2->print(false);
+    cout << "\t\t\t";
+    for (int i = 0; i < 4; ++i) {
+        stacks[i]->print();
+    }
     cout<<endl;
     for (int i = 0; i < 7; ++i) {
         cout << endl;

@@ -273,6 +273,30 @@ backend/cards/Queue.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/practice1_EDD.dir/build.make CMakeFiles/practice1_EDD.dir/backend/cards/Queue.cpp.s
 .PHONY : backend/cards/Queue.cpp.s
 
+backend/cards/Stack.o: backend/cards/Stack.cpp.o
+.PHONY : backend/cards/Stack.o
+
+# target to build an object file
+backend/cards/Stack.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practice1_EDD.dir/build.make CMakeFiles/practice1_EDD.dir/backend/cards/Stack.cpp.o
+.PHONY : backend/cards/Stack.cpp.o
+
+backend/cards/Stack.i: backend/cards/Stack.cpp.i
+.PHONY : backend/cards/Stack.i
+
+# target to preprocess a source file
+backend/cards/Stack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practice1_EDD.dir/build.make CMakeFiles/practice1_EDD.dir/backend/cards/Stack.cpp.i
+.PHONY : backend/cards/Stack.cpp.i
+
+backend/cards/Stack.s: backend/cards/Stack.cpp.s
+.PHONY : backend/cards/Stack.s
+
+# target to generate assembly for a file
+backend/cards/Stack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practice1_EDD.dir/build.make CMakeFiles/practice1_EDD.dir/backend/cards/Stack.cpp.s
+.PHONY : backend/cards/Stack.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -324,6 +348,9 @@ help:
 	@echo "... backend/cards/Queue.o"
 	@echo "... backend/cards/Queue.i"
 	@echo "... backend/cards/Queue.s"
+	@echo "... backend/cards/Stack.o"
+	@echo "... backend/cards/Stack.i"
+	@echo "... backend/cards/Stack.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

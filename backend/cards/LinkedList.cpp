@@ -30,6 +30,25 @@ void LinkedList::addToFront(Card card) {
     head = newNode;
 }
 
+Card LinkedList::removeFront() {
+    Node *aux = head;
+    Card card = head->card;
+    head = head->next;
+    if (head) {
+        head->prev = nullptr;
+    } else {
+        tail = nullptr;
+    }
+    delete aux;
+    return card;
+}
+
+void LinkedList::moveCardsToStack(Stack *& stack) {
+    if(stack->validatePush(head->card)){
+        stack->push(removeFront());
+    }
+}
+
 void LinkedList::moveCardFromDeck(Queue* &queue) {
     if(validateModeFromQueue(queue->getCard())) {
         cout<< "Si es validao mov" << endl;

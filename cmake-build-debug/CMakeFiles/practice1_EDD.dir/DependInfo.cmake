@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/dog/CLionProjects/practice1-EDD/backend/cards/LinkedList.cpp" "CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.o" "gcc" "CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.o.d"
   "/home/dog/CLionProjects/practice1-EDD/backend/cards/Node.cpp" "CMakeFiles/practice1_EDD.dir/backend/cards/Node.cpp.o" "gcc" "CMakeFiles/practice1_EDD.dir/backend/cards/Node.cpp.o.d"
   "/home/dog/CLionProjects/practice1-EDD/backend/cards/Queue.cpp" "CMakeFiles/practice1_EDD.dir/backend/cards/Queue.cpp.o" "gcc" "CMakeFiles/practice1_EDD.dir/backend/cards/Queue.cpp.o.d"
+  "/home/dog/CLionProjects/practice1-EDD/backend/cards/Stack.cpp" "CMakeFiles/practice1_EDD.dir/backend/cards/Stack.cpp.o" "gcc" "CMakeFiles/practice1_EDD.dir/backend/cards/Stack.cpp.o.d"
   "/home/dog/CLionProjects/practice1-EDD/main.cpp" "CMakeFiles/practice1_EDD.dir/main.cpp.o" "gcc" "CMakeFiles/practice1_EDD.dir/main.cpp.o.d"
   )
 

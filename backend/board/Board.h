@@ -9,16 +9,14 @@
 #include <stack>
 #include "../cards/Queue.h"
 #include "../cards/LinkedList.h"
+#include "../cards/Stack.h"
 
 class Board {
 private:
     Queue *queue1;
     Queue *queue2;
     LinkedList *col[7];
-    stack<Card> stack1;
-    stack<Card> stack2;
-    stack<Card> stack3;
-    stack<Card> stack4;
+    Stack *stacks[4];
 
 public:
     Board();

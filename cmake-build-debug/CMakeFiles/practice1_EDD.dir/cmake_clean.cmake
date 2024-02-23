@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/practice1_EDD.dir/backend/cards/Node.cpp.o.d"
   "CMakeFiles/practice1_EDD.dir/backend/cards/Queue.cpp.o"
   "CMakeFiles/practice1_EDD.dir/backend/cards/Queue.cpp.o.d"
+  "CMakeFiles/practice1_EDD.dir/backend/cards/Stack.cpp.o"
+  "CMakeFiles/practice1_EDD.dir/backend/cards/Stack.cpp.o.d"
   "CMakeFiles/practice1_EDD.dir/main.cpp.o"
   "CMakeFiles/practice1_EDD.dir/main.cpp.o.d"
   "practice1_EDD"

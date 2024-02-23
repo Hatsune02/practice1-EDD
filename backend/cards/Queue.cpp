@@ -69,10 +69,11 @@ void Queue::moveCards(Queue *& queue) {
 void Queue::print(bool hidden) {
     if(hidden) {
         if(rear) cout << "██  ";
-        else cout << "    ";
+        else cout << "░░  ";
     }
     else {
         if(rear) rear->card.print();
+        else cout << "░░";
     }
 /*    Node *current = front;
     cout << endl;
