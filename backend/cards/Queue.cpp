@@ -4,7 +4,6 @@
 
 #include "Queue.h"
 #include "Node.h"
-
 #include <iostream>
 
 Queue::Queue() {
@@ -46,6 +45,7 @@ bool Queue::isEmpty() const {
 void Queue::print() {
     Node *current = front;
     while (current != nullptr) {
+        //current->card.print();
         cout << *current->card.getSymbol() << *current->card.getSuit() << endl;
         current = current->next;
     }

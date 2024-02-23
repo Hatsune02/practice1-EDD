@@ -3,7 +3,6 @@
 //
 #include <iostream>
 #include <string>
-#include <vector>
 #include <algorithm> // Para std::shuffle
 #include <random>    // Para std::default_random_engine y std::random_device
 #include "Deck.h"
@@ -19,14 +18,17 @@ Deck::Deck() {
 }
 
 void Deck::fillDeck() {
+    int aux = 0;
+    this->cards = new Card[52];
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 13; j++) {
             if(i == 0 || i == 3) {
-                this->cards.emplace_back(&symbols[j],&suits[i],color1,j+1);
+                this->cards[aux] = *new Card(&symbols[j],&suits[i],color1,j+1);
             }
             else {
-                this->cards.emplace_back(&symbols[j],&suits[i],color2,j+1);
+                this->cards[aux] = *new Card(&symbols[j],&suits[i],color2,j+1);
             }
+            aux++;
         }
     }
     mixDeck();
@@ -35,14 +37,14 @@ void Deck::fillDeck() {
 void Deck::mixDeck() {
     random_device rd;
     default_random_engine rng(rd());
-    shuffle(cards.begin(), cards.end(), rng);
+    shuffle(cards, cards+52, rng);
 }
 
 void Deck::print(){
-    for (Card& card : cards) {
-        cout << "Palo: " << *card.getSuit() << ", Valor: " << *card.getSymbol() <<
-        ", Color: " << card.getColor() << endl;
+    for (int i = 0; i < 52; ++i) {
+        cout << "Palo: " << *cards[i].getSuit() << ", Valor: " << *cards[i].getSymbol() <<
+             ", Color: " << cards[i].getColor() << endl;
     }
 }
 
-vector<Card>& Deck::getDeck() {return cards;}
+Card* Deck::getDeck() {return cards;}

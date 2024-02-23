@@ -30,56 +30,45 @@ void LinkedList::addToFront(Card card) {
     head = newNode;
 }
 
-void LinkedList::addToBack(Card card) {
-    Node *newNode = new Node();
-    newNode->card = card;
-    newNode->next = nullptr;
-    newNode->prev = tail;
+void LinkedList::moveCards(string symbol, string suit, LinkedList* &list) {
+    Node *current = head;
+    Node *aux = nullptr;
 
-    if (tail) {
-        tail->next = newNode;
-    } else {
-        head = newNode;
+    while (current) {
+        if(*current->card.getSymbol() == symbol && *current->card.getSuit() == suit){
+            aux = current;
+            break;
+        }
+        current = current->next;
     }
-    tail = newNode;
-}
-
-void LinkedList::removeFront() {
-    if (!head) {
+    if(!aux){
+        cout << "No existe esa carta en esta lista." << endl;
         return;
     }
 
-    Node *aux = head;
-    head = head->next;
-    if (head) {
-        head->prev = nullptr;
-    } else {
+    Node *firstNode = head;
+    if(aux->next) aux->next->prev = nullptr;
+    else {
+        head = nullptr;
         tail = nullptr;
     }
-    delete aux;
+
+    head = aux->next;
+    aux->next = list->head;
+    if(list->head) list->head->prev = aux;
+    list->head = firstNode;
+
 }
 
-void LinkedList::removeBack() {
-    if (!tail) {
-        return;
-    }
-
-    Node *aux = tail;
-    tail = tail->prev;
-    if (tail) {
-        tail->next = nullptr;
-    } else {
-        head = nullptr;
-    }
-    delete aux;
-}
 
 void LinkedList::print() {
-    Node *current = head;
+    Node *current = tail;
     while (current) {
-        cout << *current->card.getSymbol();
-        cout << *current->card.getSuit() << " ";
-        current = current->next;
+        if(current == head){
+            current->card.setHidden(false);
+        }
+        current->card.print();
+        current = current->prev;
     }
    cout << endl;
 }

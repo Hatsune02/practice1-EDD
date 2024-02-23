@@ -1,7 +1,7 @@
 //
 // Created by dog on 20/02/24.
 //
-
+#include  <iostream>
 #include "Card.h"
 #include <string>
 using namespace std;
@@ -13,6 +13,11 @@ Card::Card(string* symbol, string* suit, char color, int value) {
     this->color = color;
     this->value = value;
     this->hidden = true;
+}
+
+void Card::print() {
+    if(hidden) cout << "██ ";
+    else cout << *symbol << *suit /*<< color*/ << " ";
 }
 
 string* Card::getSymbol() {return symbol;}

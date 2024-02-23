@@ -156,7 +156,4 @@ CMakeFiles/practice1_EDD.dir/backend/board/Board.cpp.o: \
  /home/dog/CLionProjects/practice1-EDD/backend/board/../cards/Node.h \
  /home/dog/CLionProjects/practice1-EDD/backend/board/../cards/Card.h \
  /home/dog/CLionProjects/practice1-EDD/backend/board/../cards/LinkedList.h \
- /home/dog/CLionProjects/practice1-EDD/backend/board/../cards/Deck.h \
- /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_vector.h \
- /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc
+ /home/dog/CLionProjects/practice1-EDD/backend/board/../cards/Deck.h

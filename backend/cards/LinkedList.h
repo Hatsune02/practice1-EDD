@@ -16,9 +16,8 @@ public:
     ~LinkedList();
 
     void addToFront(Card);
-    void addToBack(Card);
-    void removeFront();
-    void removeBack();
+
+    void moveCards(string, string,LinkedList* &);
     void print();
 
 };

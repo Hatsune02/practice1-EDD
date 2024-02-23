@@ -26,6 +26,8 @@ public:
     bool getHidden();
     //setter
     void setHidden(bool);
+
+    void print();
 };
 
 
