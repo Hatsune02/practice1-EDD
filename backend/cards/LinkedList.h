@@ -5,6 +5,7 @@
 #ifndef PRACTICE1_EDD_LINKEDLIST_H
 #define PRACTICE1_EDD_LINKEDLIST_H
 #include "Node.h"
+#include "Queue.h"
 
 class LinkedList {
 private:
@@ -16,8 +17,11 @@ public:
     ~LinkedList();
 
     void addToFront(Card);
-
+    void moveNodes(Node*&, LinkedList*&);
     void moveCards(string, string,LinkedList* &);
+    void moveCardFromDeck(Queue*&);
+    static bool validateMove(Node*&, LinkedList*&);
+    bool validateModeFromQueue(Card);
     void print();
 
 };

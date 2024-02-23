@@ -627,6 +627,7 @@ CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.o: /home/dog/CLionProj
   /home/dog/CLionProjects/practice1-EDD/backend/cards/Card.h \
   /home/dog/CLionProjects/practice1-EDD/backend/cards/LinkedList.h \
   /home/dog/CLionProjects/practice1-EDD/backend/cards/Node.h \
+  /home/dog/CLionProjects/practice1-EDD/backend/cards/Queue.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

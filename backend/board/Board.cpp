@@ -19,7 +19,10 @@ void Board::fillBoard() {
     Deck *deck = new Deck();
 
     for (int i = 0; i < 52; ++i) {
-        if (i < 24) queue1->getInto(deck->getDeck()[i]);
+        if (i < 24) {
+            deck->getDeck()[i].setHidden(false);
+            queue1->getInto(deck->getDeck()[i]);
+        }
         else if (i == 24) col[0]->addToFront(deck->getDeck()[i]);
         else if (i < 27) col[1]->addToFront(deck->getDeck()[i]);
         else if (i < 30) col[2]->addToFront(deck->getDeck()[i]);
@@ -29,8 +32,8 @@ void Board::fillBoard() {
         else col[6]->addToFront(deck->getDeck()[i]);
     }
     printBoard();
-
-    int fila1, fila2, suit;
+    //MOVER xd
+    /*int fila1, fila2, suit;
     string symbol,suit2;
     cout<< "Escribe la columna: " ;
     //getline(cin, fila);
@@ -39,21 +42,35 @@ void Board::fillBoard() {
     cin >> symbol;
     cout<< "Escribe el palo 1.corazon 2.diamante 3.picas 4.treboles: " ;
     cin >> suit;
-/*    cout<< "Escribe la columna donde lo quieres dejar: " ;
+    cout<< "Escribe la columna donde lo quieres dejar: " ;
     //getline(cin, fila);
-    cin >> fila2;*/
+    cin >> fila2;
 
     if(suit == 1) suit2 = "♥";
     if(suit == 2) suit2 = "♦";
     if(suit == 3) suit2 = "♠";
     if(suit == 4) suit2 = "♣";
-
     col[fila1-1]->moveCards(symbol,suit2,col[0]);
-    printBoard();
+    */
+    //MOVER COLAS
+    int option, fila;
+    for (int i = 0; i < 10; ++i) {
+        cout<< "Cambia carta (1. Si, 2. poner, cualquier otro. no): ";
+        cin >> option;
+        if(option==1) queue1->moveCards(queue2);
+        if(option==2){
+            cout << "Ingresa la fila: ";
+            cin >> fila;
+            col[fila]->moveCardFromDeck(queue2);
+        }
+        printBoard();
+    }
+
 }
 
 void Board::printBoard() {
-    //queue1->print();
+    queue1->print(true);
+    queue2->print(false);
     cout<<endl;
     for (int i = 0; i < 7; ++i) {
         cout << endl;

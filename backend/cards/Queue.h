@@ -14,8 +14,10 @@ public:
     Queue();
     void getInto(Card);
     Card takeOut();
-    bool isEmpty() const;
-    void print();
+    Card takeOutRear();
+    Card getCard();
+    void moveCards(Queue*&);
+    void print(bool);
 };
 
 
