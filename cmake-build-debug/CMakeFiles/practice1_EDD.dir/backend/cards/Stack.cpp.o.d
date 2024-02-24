@@ -148,4 +148,5 @@ CMakeFiles/practice1_EDD.dir/backend/cards/Stack.cpp.o: \
  /usr/include/c++/11/bits/istream.tcc \
  /home/dog/CLionProjects/practice1-EDD/backend/cards/Stack.h \
  /home/dog/CLionProjects/practice1-EDD/backend/cards/Node.h \
- /home/dog/CLionProjects/practice1-EDD/backend/cards/Card.h
+ /home/dog/CLionProjects/practice1-EDD/backend/cards/Card.h \
+ /home/dog/CLionProjects/practice1-EDD/backend/cards/Queue.h

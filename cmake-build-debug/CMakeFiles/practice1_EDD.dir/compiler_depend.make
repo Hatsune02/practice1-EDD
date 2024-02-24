@@ -629,6 +629,7 @@ CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.o: /home/dog/CLionProj
   /home/dog/CLionProjects/practice1-EDD/backend/cards/LinkedList.h \
   /home/dog/CLionProjects/practice1-EDD/backend/cards/Node.h \
   /home/dog/CLionProjects/practice1-EDD/backend/cards/Queue.h \
+  /home/dog/CLionProjects/practice1-EDD/backend/cards/Stack.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -1150,6 +1151,7 @@ CMakeFiles/practice1_EDD.dir/backend/cards/Queue.cpp.o: /home/dog/CLionProjects/
 CMakeFiles/practice1_EDD.dir/backend/cards/Stack.cpp.o: /home/dog/CLionProjects/practice1-EDD/backend/cards/Stack.cpp \
   /home/dog/CLionProjects/practice1-EDD/backend/cards/Card.h \
   /home/dog/CLionProjects/practice1-EDD/backend/cards/Node.h \
+  /home/dog/CLionProjects/practice1-EDD/backend/cards/Queue.h \
   /home/dog/CLionProjects/practice1-EDD/backend/cards/Stack.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \

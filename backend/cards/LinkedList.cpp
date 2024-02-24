@@ -50,10 +50,9 @@ void LinkedList::moveCardsToStack(Stack *& stack) {
 }
 
 void LinkedList::moveCardFromDeck(Queue* &queue) {
-    if(validateModeFromQueue(queue->getCard())) {
-        cout<< "Si es validao mov" << endl;
+    if(validateMoveFromQueue(queue->getCard())) {
+        addToFront(queue->takeOutRear());
     }
-    addToFront(queue->takeOutRear());
 }
 
 void LinkedList::moveCards(string symbol, string suit, LinkedList* &list) {
@@ -72,13 +71,7 @@ void LinkedList::moveCards(string symbol, string suit, LinkedList* &list) {
         return;
     }
 
-    if(validateMove(aux, list)){
-
-    }
-    else{
-        cout << "No se puede realizar este movimiento." << endl;
-    }
-    moveNodes(aux, list);
+    if(validateMove(aux, list)) moveNodes(aux, list);
 }
 
 bool LinkedList::validateMove(Node *& node, LinkedList *& list) {
@@ -95,7 +88,7 @@ bool LinkedList::validateMove(Node *& node, LinkedList *& list) {
     return false;
 }
 
-bool LinkedList::validateModeFromQueue(Card card) {
+bool LinkedList::validateMoveFromQueue(Card card) {
     if(card.getValue() == (head->card.getValue() - 1)
     && card.getColor() != (head->card.getColor())) return true;
     cout << "No se puede realizar este movimiento." <<endl;
@@ -126,4 +119,9 @@ void LinkedList::print() {
         current = current->prev;
     }
    cout << endl;
+}
+
+Card LinkedList::firstCard() {
+    if(head) return head->card;
+    return {};
 }

@@ -23,9 +23,10 @@ public:
     void moveCards(string, string,LinkedList* &);
     void moveCardFromDeck(Queue*&);
     static bool validateMove(Node*&, LinkedList*&);
-    bool validateModeFromQueue(Card);
+    bool validateMoveFromQueue(Card);
     void print();
     void moveCardsToStack(Stack*&);
+    Card firstCard();
 };
 
 

@@ -16,6 +16,7 @@ Board::Board() {
     for (int i = 0; i < 4; ++i) {
         this->stacks[i] = new Stack();
     }
+    fillBoard();
 }
 
 void Board::fillBoard() {
@@ -34,44 +35,10 @@ void Board::fillBoard() {
         else if (i < 45) col[5]->addToFront(deck->getDeck()[i]);
         else col[6]->addToFront(deck->getDeck()[i]);
     }
-    printBoard();
-    //MOVER xd
-    /*int fila1, fila2, suit;
-    string symbol,suit2;
-    cout<< "Escribe la columna: " ;
-    //getline(cin, fila);
-    cin >> fila1;
-    cout<< "Escribe el simobolo: " ;
-    cin >> symbol;
-    cout<< "Escribe el palo 1.corazon 2.diamante 3.picas 4.treboles: " ;
-    cin >> suit;
-    cout<< "Escribe la columna donde lo quieres dejar: " ;
-    //getline(cin, fila);
-    cin >> fila2;
-
-    if(suit == 1) suit2 = "♥";
-    if(suit == 2) suit2 = "♦";
-    if(suit == 3) suit2 = "♠";
-    if(suit == 4) suit2 = "♣";
-    col[fila1-1]->moveCards(symbol,suit2,col[0]);
-    */
-    //MOVER COLAS
-    int option, fila;
-    for (int i = 0; i < 10; ++i) {
-        cout<< "Cambia carta (1. Si, 2. poner, cualquier otro. no): ";
-        cin >> option;
-        if(option==1) queue1->moveCards(queue2);
-        if(option==2){
-            cout << "Ingresa la fila: ";
-            cin >> fila;
-            col[fila]->moveCardFromDeck(queue2);
-        }
-        printBoard();
-    }
-
 }
 
 void Board::printBoard() {
+    cout << "\t";
     queue1->print(true);
     queue2->print(false);
     cout << "\t\t\t";
@@ -81,6 +48,121 @@ void Board::printBoard() {
     cout<<endl;
     for (int i = 0; i < 7; ++i) {
         cout << endl;
+        cout << i+1 << ")  ";
         col[i]->print();
+    }
+    cout<<endl;
+}
+
+void Board::play() {
+    int option1, option2, list1=-1, list2=-1;
+    string line, symbol, suit;
+    do{
+        printBoard();
+        cout << "1. Voltear mazo\n2. Mover cartas\n3. Apilar cartas\n4. Retroceso\n5. Salir" << endl;
+        cin >> line;
+        option1 = validateNum(line);
+        switch (option1) {
+            case 1://Voletear mazo
+                queue1->moveCards(queue2);
+                break;
+            case 2://Mover cartas
+                cout << "1. Del mazo\n2. De la mesa" << endl;
+                cin >> line;
+                option2 = validateNum(line);
+                if(option2 == 1){
+                    cout << "Ingresa la fila: " << endl;
+                    cin >> line;
+                    option2 = validateNum(line) - 1;
+
+                    if(col[option2]) col[option2]->moveCardFromDeck(queue2);
+                }
+                else if(option2 == 2) moveCardsFromList(line, list1, list2, symbol, suit);
+
+                else cout << "Instruccion invalida." << endl;
+
+                break;
+            case 3://Apilar cartas
+                cout << "1. Del mazo\n2. De la mesa" << endl;
+                cin >> line;
+                option2 = validateNum(line);
+                if(option2 == 1) moveCardFromQueueToStack();
+
+                else if(option2 == 2) moveCardFromListToStack(option2, line);
+
+                else cout << "Instruccion invalida." << endl;
+                break;
+            case 4:
+                break;
+        }
+        if(stacks[0]->verifyFullStack() && stacks[1]->verifyFullStack() &&
+            stacks[2]->verifyFullStack() && stacks[3]->verifyFullStack()){
+            cout << "\nJUEGO TERMINADO!" << endl;
+            break;
+        }
+    }while(option1 != 5);
+}
+
+void Board::moveCardsFromList(string line, int list1, int list2, string symbol, string suit) {
+    int aux;
+    cout<< "Escribe la columna: " ;
+    cin >> line;
+    list1 = validateNum(line) - 1;
+    cout<< "Escribe el simobolo: " ;
+    cin >> symbol;
+    cout<< "1.Corazon  2.Diamante \n3.Picas  4.Treboles: " ;
+    cin >> line;
+    aux = validateNum(line);
+    if(aux == 1) suit = "♥";
+    else if(aux == 2) suit = "♦";
+    else if(aux == 3) suit = "♠";
+    else if(aux == 4) suit = "♣";
+    else suit = " ";
+    cout<< "Escribe la columna donde lo quieres dejar: " ;
+    cin >> line;
+    list2 = validateNum(line) - 1;
+
+    if(col[list1] != nullptr && col[list2] != nullptr)
+    col[list1]->moveCards(symbol,suit,col[list2]);
+
+}
+
+void Board::moveCardFromQueueToStack() {
+    if(*queue2->getCard().getSuit() == "♥") stacks[0]->pushFromQueue(queue2);
+
+    else if(*queue2->getCard().getSuit() == "♦") stacks[1]->pushFromQueue(queue2);
+
+    else if(*queue2->getCard().getSuit() == "♠") stacks[2]->pushFromQueue(queue2);
+
+    else if(*queue2->getCard().getSuit() == "♣") stacks[3]->pushFromQueue(queue2);
+
+    else cout << "Movimiento invalido" << endl;
+}
+
+void Board::moveCardFromListToStack(int option, string line) {
+    cout << "Ingresa la fila: " << endl;
+    cin >> line;
+    option = validateNum(line) - 1;
+    if(col[option] && col[option]->firstCard().getSuit()){
+        line = *col[option]->firstCard().getSuit();
+        if(line == "♥") col[option]->moveCardsToStack(stacks[0]);
+
+        else if(line == "♦") col[option]->moveCardsToStack(stacks[1]);
+
+        else if(line == "♠") col[option]->moveCardsToStack(stacks[2]);
+
+        else if(line == "♣") col[option]->moveCardsToStack(stacks[3]);
+
+    }
+    else cout << "Movimiento invalido." << endl;
+}
+
+int Board::validateNum(const string& str) {
+    try{
+        return stoi(str);
+    }
+    catch(const invalid_argument& e){
+        cout << "Escribe un numero porfavor" << endl;
+        return -1;
     }
 }

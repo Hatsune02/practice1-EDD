@@ -7,7 +7,7 @@ using namespace std;
 int main() {
     Board *b = new Board();
 
-    b->fillBoard();
+    b->play();
 
     return 0;
 }

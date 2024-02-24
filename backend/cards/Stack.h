@@ -7,6 +7,7 @@
 
 
 #include "Node.h"
+#include "Queue.h"
 
 class Stack {
 private:
@@ -14,8 +15,11 @@ private:
 public:
     Stack();
     void push(Card);
+    Card pop();
     void print();
     bool validatePush(Card);
+    void pushFromQueue(Queue*&);
+    bool verifyFullStack();
 };
 
 

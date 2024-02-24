@@ -157,4 +157,5 @@ CMakeFiles/practice1_EDD.dir/main.cpp.o: \
  /home/dog/CLionProjects/practice1-EDD/backend/board/../cards/Card.h \
  /home/dog/CLionProjects/practice1-EDD/backend/board/../cards/LinkedList.h \
  /home/dog/CLionProjects/practice1-EDD/backend/board/../cards/Queue.h \
+ /home/dog/CLionProjects/practice1-EDD/backend/board/../cards/Stack.h \
  /home/dog/CLionProjects/practice1-EDD/backend/board/../cards/Stack.h

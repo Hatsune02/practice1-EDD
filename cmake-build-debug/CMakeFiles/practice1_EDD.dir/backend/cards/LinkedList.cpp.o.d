@@ -133,6 +133,7 @@ CMakeFiles/practice1_EDD.dir/backend/cards/LinkedList.cpp.o: \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc \
  /home/dog/CLionProjects/practice1-EDD/backend/cards/Queue.h \
+ /home/dog/CLionProjects/practice1-EDD/backend/cards/Stack.h \
  /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
  /usr/include/c++/11/ios /usr/include/c++/11/exception \
  /usr/include/c++/11/bits/exception_ptr.h \

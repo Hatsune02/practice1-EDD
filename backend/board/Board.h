@@ -22,6 +22,11 @@ public:
     Board();
     void fillBoard();
     void printBoard();
+    void play();
+    void moveCardsFromList(string, int, int, string, string);
+    void moveCardFromQueueToStack();
+    void moveCardFromListToStack(int, string);
+    static int validateNum(const string&);
 };
 
 
