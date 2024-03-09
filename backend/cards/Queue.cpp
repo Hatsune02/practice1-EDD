@@ -10,6 +10,28 @@ Queue::Queue() {
     this->rear = nullptr;
 }
 
+Queue::Queue(const Queue& other) {
+    front = nullptr;
+    rear = nullptr;
+
+    Node* current = other.front;
+    while (current != nullptr) {
+        // Crear una nueva instancia de Node y Card para cada nodo en la cola
+        Node* newNode = new Node();
+        newNode->card = current->card;
+        newNode->next = nullptr;
+
+        if (rear == nullptr) {
+            front = rear = newNode;
+        } else {
+            rear->next = newNode;
+            rear = newNode;
+        }
+
+        current = current->next;
+    }
+}
+
 void Queue::getInto(Card card) {
     Node *newNode = new Node();
     newNode->card = card;

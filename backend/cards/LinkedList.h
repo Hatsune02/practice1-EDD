@@ -10,11 +10,13 @@
 
 class LinkedList {
 private:
+
     Node *head;
     Node *tail;
 
 public:
     LinkedList();
+    LinkedList(const LinkedList&);
     ~LinkedList();
 
     void addToFront(Card);
@@ -27,6 +29,12 @@ public:
     void print();
     void moveCardsToStack(Stack*&);
     Card firstCard();
+
+    Node* getTail();
+    Node* getHead();
+
+    Node* getNodePosition(int);
+    bool showCard(int,int);
 };
 
 

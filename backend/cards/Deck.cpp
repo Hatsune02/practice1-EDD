@@ -9,8 +9,8 @@
 #include "Card.h"
 using namespace std;
 
-string symbols[] = {"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
-string suits[] = {"♠", "♥","♦","♣"};
+string symbols[] = {"A","2","3","4","5","6","7","8","9","T","J","Q","K"};
+string suits[] = {"♠", "♡","♢","♣"};
 char color1 = 'N', color2 = 'R';
 
 Deck::Deck() {

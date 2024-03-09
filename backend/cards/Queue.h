@@ -12,6 +12,7 @@ private:
     Node *rear;
 public:
     Queue();
+    Queue(const Queue &other);
     void getInto(Card);
     Card takeOut();
     Card takeOutRear();

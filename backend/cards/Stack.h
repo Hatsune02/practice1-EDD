@@ -14,6 +14,7 @@ private:
     Node* top;
 public:
     Stack();
+    Stack(const Stack &other);
     void push(Card);
     Card pop();
     void print();

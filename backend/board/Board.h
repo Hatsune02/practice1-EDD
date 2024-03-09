@@ -18,6 +18,13 @@ private:
     LinkedList *col[7];
     Stack *stacks[4];
 
+    //Copia de seguridad
+    LinkedList *backupCol[7];
+    Stack *backupStacks[4];
+    Queue *backupQueue1;
+    Queue *backupQueue2;
+    bool canUndo;
+
 public:
     Board();
     void fillBoard();
@@ -27,6 +34,10 @@ public:
     void moveCardFromQueueToStack();
     void moveCardFromListToStack(int, string);
     static int validateNum(const string&);
+    void undo();
+    void makeBackup();
+    void peekNext(string);
+    void peekPrev(string);
 };
 
 

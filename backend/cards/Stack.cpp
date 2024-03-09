@@ -9,6 +9,21 @@ Stack::Stack() {
     top = nullptr;
 }
 
+Stack::Stack(const Stack& other) {
+    top = nullptr;
+
+    Node* current = other.top;
+    while (current != nullptr) {
+        // Crear una nueva instancia de Node y Card para cada nodo en la pila
+        Node* newNode = new Node();
+        newNode->card = current->card;
+        newNode->next = top;
+        top = newNode;
+
+        current = current->next;
+    }
+}
+
 void Stack::push(Card card) {
     Node *newNode = new Node();
     newNode->card = card;
@@ -26,7 +41,7 @@ Card Stack::pop() {
 
 void Stack::print() {
     if(!top){
-        cout << "░░  ";
+        cout << "░░   ";
     }
     else{
         top->card.print();

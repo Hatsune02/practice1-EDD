@@ -9,6 +9,26 @@ LinkedList::LinkedList() {
     this->head = nullptr;
     this->tail = nullptr;
 }
+LinkedList::LinkedList(const LinkedList& other) {
+    head = nullptr;
+    tail = nullptr;
+
+    Node* current = other.head;
+    while (current != nullptr) {
+        // Crear una nueva instancia de Node y Card para cada nodo en la lista
+        Node* newNode = new Node();
+        newNode->card = current->card;
+        newNode->next = nullptr;
+        if (head == nullptr) {
+            head = newNode;
+        } else {
+            tail->next = newNode;
+            newNode->prev = tail;
+        }
+        tail = newNode;
+        current = current->next;
+    }
+}
 LinkedList::~LinkedList() {
     Node *current = head;
     while (current) {
@@ -125,3 +145,66 @@ Card LinkedList::firstCard() {
     if(head) return head->card;
     return {};
 }
+
+Node *LinkedList::getTail() {
+    return tail;
+}
+
+Node *LinkedList::getHead() {
+    return head;
+}
+
+Node *LinkedList::getNodePosition(int pos) {
+    if (pos < 0) {
+        return nullptr;
+    }
+    Node* current = head;
+    int count = 0;
+    while (current != nullptr) {
+        if (count == pos) {
+            return current;
+        }
+        current = current->next;
+        count++;
+    }
+    return nullptr;
+}
+
+bool LinkedList::showCard(int pos, int show) {
+    Node* aux = getNodePosition(pos);
+    if(aux){
+        if(show == 1){ // +1 NEXT MOSTRAR
+            if(aux->next) aux->next->card.setHidden(false);
+            else {
+                cout << "No tiene siguiente\n"<<endl;
+                return false;
+            }
+        }
+        else if(show == 2){ // +2 PREV MOSTRAR
+            if(aux->prev) aux->prev->card.setHidden(false);
+            else {
+                cout << "No tiene anterior\n"<<endl;
+                return false;
+            }
+        }
+        else if(show == -1){ // -1 NEXT OCULTAR
+            if(aux->next) aux->next->card.setHidden(true);
+            else {
+                cout << "No tiene siguiente\n"<<endl;
+                return false;
+            }
+        }
+        else if(show == -2){ // -2 PREV OCULTAR
+            if(aux->prev) aux->prev->card.setHidden(true);
+            else {
+                cout << "No tiene anterior\n"<<endl;
+                return false;
+            }
+        }
+        return true;
+    }
+    else cout << "No existe esa carta\n" << endl;
+    return false;
+}
+
+
