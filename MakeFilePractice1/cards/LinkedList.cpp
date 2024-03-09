@@ -75,7 +75,7 @@ void LinkedList::moveCardFromDeck(Queue* &queue) {
     }
 }
 
-void LinkedList::moveCards(string symbol, string suit, LinkedList* &list) {
+void LinkedList::moveCards(const string& symbol, const string& suit, LinkedList* &list) {
     Node *current = head;
     Node *aux = nullptr;
 
@@ -99,8 +99,13 @@ bool LinkedList::validateMove(Node *& node, LinkedList *& list) {
     if(node->card.getValue() == (list->head->card.getValue()-1)
        && node->card.getColor() != list->head->card.getColor()){
         //Ve si el valor y color de la carta son correctos en su anterior
-        if(node->card.getValue() == (node->prev->card.getValue()+1)
-           && node->card.getColor() != node->prev->card.getColor()){
+        if(node->prev){
+            if(node->card.getValue() == (node->prev->card.getValue()+1)
+               && node->card.getColor() != node->prev->card.getColor()){
+                return true;
+            }
+        }
+        else{
             return true;
         }
     }

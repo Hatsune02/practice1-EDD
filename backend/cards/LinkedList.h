@@ -22,7 +22,7 @@ public:
     void addToFront(Card);
     Card removeFront();
     void moveNodes(Node*&, LinkedList*&);
-    void moveCards(string, string,LinkedList* &);
+    void moveCards(const string&, const string&,LinkedList* &);
     void moveCardFromDeck(Queue*&);
     static bool validateMove(Node*&, LinkedList*&);
     bool validateMoveFromQueue(Card);

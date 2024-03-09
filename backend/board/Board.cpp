@@ -169,15 +169,18 @@ void Board::moveCardsFromList(string line, int list1, int list2, string symbol, 
 }
 
 void Board::moveCardFromQueueToStack() {
-    if(*queue2->getCard().getSuit() == "♡   ") stacks[0]->pushFromQueue(queue2);
+    if(queue2->getCard().getSymbol() != nullptr){
+        if(*queue2->getCard().getSuit() == "♡") stacks[0]->pushFromQueue(queue2);
 
-    else if(*queue2->getCard().getSuit() == "♢") stacks[1]->pushFromQueue(queue2);
+        else if(*queue2->getCard().getSuit() == "♢") stacks[1]->pushFromQueue(queue2);
 
-    else if(*queue2->getCard().getSuit() == "♠") stacks[2]->pushFromQueue(queue2);
+        else if(*queue2->getCard().getSuit() == "♠") stacks[2]->pushFromQueue(queue2);
 
-    else if(*queue2->getCard().getSuit() == "♣") stacks[3]->pushFromQueue(queue2);
+        else if(*queue2->getCard().getSuit() == "♣") stacks[3]->pushFromQueue(queue2);
 
-    else cout << "Movimiento invalido\n" << endl;
+        else cout << "Movimiento invalido\n" << endl;
+    }
+
 }
 
 void Board::moveCardFromListToStack(int option, string line) {

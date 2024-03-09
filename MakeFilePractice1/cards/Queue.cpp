@@ -56,22 +56,26 @@ Card Queue::takeOut() {
     return card;
 }
 Card Queue::takeOutRear() {
-    Card card = rear->card;
+    if(rear){
+        Card card = rear->card;
 
-    if (rear == front) {
-        delete rear;
-        front = rear = nullptr;
-    }
-    else {
-        Node *prev = front;
-        while(prev->next != rear){
-            prev = prev->next;
+        if (rear == front) {
+            delete rear;
+            front = rear = nullptr;
         }
-        delete rear;
-        rear = prev;
-        rear->next = nullptr;
+        else {
+            Node *prev = front;
+            while(prev->next != rear){
+                prev = prev->next;
+            }
+            delete rear;
+            rear = prev;
+            rear->next = nullptr;
+        }
+        return card;
     }
-    return card;
+    return {};
+
 }
 
 Card Queue::getCard() {
