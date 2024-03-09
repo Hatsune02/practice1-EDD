@@ -82,8 +82,12 @@ void Board::play() {
     string line, symbol, suit;
     do{
         printBoard();
-        if(canUndo) cout << "1. Voltear mazo\n2. Mover cartas\n3. Apilar cartas\n4. Retroceder\n5. Ver siguiente\t6. Ver anterior\n7. Salir" << endl;
-        else cout << "1. Voltear mazo\n2. Mover cartas\n3. Apilar cartas\n4. Adelantar\n5. Ver siguiente\t6. Ver anterior\n7. Salir" << endl;
+        if(backupQueue1){
+            if(canUndo) cout << "1. Voltear mazo\n2. Mover cartas\n3. Apilar cartas\n4. Retroceder\n5. Ver siguiente\t6. Ver anterior\n7. Salir" << endl;
+            else cout << "1. Voltear mazo\n2. Mover cartas\n3. Apilar cartas\n4. Adelantar\n5. Ver siguiente\t6. Ver anterior\n7. Salir" << endl;
+        }
+        else cout << "1. Voltear mazo\n2. Mover cartas\n3. Apilar cartas\n4. Retroceder\n5. Ver siguiente\t6. Ver anterior\n7. Salir" << endl;
+
         cin >> line;
         option1 = validateNum(line);
         switch (option1) {
@@ -126,7 +130,7 @@ void Board::play() {
                 else cout << "Instruccion invalida.\n" << endl;
                 break;
             case 4: // Retroceso
-                if(!queue1) cout << "No puedes retroceder.\n" << endl;
+                if(!backupQueue1) cout << "No puedes retroceder.\n" << endl;
                 else undo();
                 break;
             case 5:
